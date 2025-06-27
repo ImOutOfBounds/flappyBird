@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1phf4baht06e"]
+
+[ext_resource type="Script" path="res://scripts/obstaculo.gd" id="1_ifduh"]
+[ext_resource type="Texture2D" uid="uid://bq8384ltbv31a" path="res://sprites/obstaculo.png" id="1_vot4i"]
+[ext_resource type="PackedScene" uid="uid://diw120vqbcteb" path="res://cenas/coletavel.tscn" id="3_673pt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6jci"]
+size = Vector2(80, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yaqh8"]
+size = Vector2(80, 320)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_ifduh")
+
+[node name="Sprite_cima" type="Sprite2D" parent="."]
+position = Vector2(700, -140)
+texture = ExtResource("1_vot4i")
+
+[node name="Sprite_baixo" type="Sprite2D" parent="."]
+position = Vector2(700, 300)
+texture = ExtResource("1_vot4i")
+
+[node name="colisao_topo" type="CollisionShape2D" parent="."]
+position = Vector2(700, -140)
+shape = SubResource("RectangleShape2D_j6jci")
+
+[node name="colisao_baixa" type="CollisionShape2D" parent="."]
+position = Vector2(700, 300)
+shape = SubResource("RectangleShape2D_yaqh8")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="coletavel" parent="." instance=ExtResource("3_673pt")]
+position = Vector2(701, 81)

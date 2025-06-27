@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b27h0pyec608"
+path="res://.godot/imported/14 - Snow.mp3-d09640cd1663f8efb69f2e36d004c4ff.mp3str"
+
+[deps]
+
+source_file="res://sons/soundtrack/14 - Snow.mp3"
+dest_files=["res://.godot/imported/14 - Snow.mp3-d09640cd1663f8efb69f2e36d004c4ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

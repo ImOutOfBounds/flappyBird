@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dubo3unqsvebq"
+path="res://.godot/imported/37 - Plantera.mp3-10f432b382c83c181d047cdce0541da2.mp3str"
+
+[deps]
+
+source_file="res://sons/soundtrack/37 - Plantera.mp3"
+dest_files=["res://.godot/imported/37 - Plantera.mp3-10f432b382c83c181d047cdce0541da2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

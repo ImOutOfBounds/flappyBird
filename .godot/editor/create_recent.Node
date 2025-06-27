@@ -1,0 +1,6 @@
+CollisionShape2D
+StaticBody2D
+AudioStreamPlayer
+AnimationPlayer
+Sprite2D
+CharacterBody2D

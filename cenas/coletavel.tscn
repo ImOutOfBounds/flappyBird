@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://diw120vqbcteb"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_tw731"]
+[ext_resource type="Texture2D" uid="uid://c5clkv1efsupv" path="res://sprites/coin.png" id="2_yjg8u"]
+[ext_resource type="AudioStream" uid="uid://cpq1u13o2oxta" path="res://sons/coletavel.mp3" id="3_v54m4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dixyg"]
+radius = 13.0384
+
+[sub_resource type="Animation" id="Animation_0s5rh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0c5mh"]
+resource_name = "coin"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36t4w"]
+_data = {
+"RESET": SubResource("Animation_0s5rh"),
+"coin": SubResource("Animation_0c5mh")
+}
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_tw731")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 27)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_yjg8u")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_dixyg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v54m4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_36t4w")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bns2nbdoj4kq3"
+path="res://.godot/imported/04 - Overworld Day.mp3-c3150fad1647c4120c3e3bdf149a4776.mp3str"
+
+[deps]
+
+source_file="res://sons/soundtrack/04 - Overworld Day.mp3"
+dest_files=["res://.godot/imported/04 - Overworld Day.mp3-c3150fad1647c4120c3e3bdf149a4776.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
