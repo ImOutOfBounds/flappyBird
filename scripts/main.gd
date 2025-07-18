@@ -20,6 +20,8 @@ func _on_timer_timeout():
 	$Timer.start(delay)
 	
 func _process(delta):
+	if Input.is_action_just_pressed("ui_text_clear_carets_and_selection"):
+		get_tree().quit()
 	$Label.text = str(Global.pontos)
 	if Global.pontos < 30:
 		Global.fase = 0
@@ -36,5 +38,3 @@ func _process(delta):
 			Global.recorde = Global.pontos
 			Global.novo_recorde = true
 		$menu.show()
-
-

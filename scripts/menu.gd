@@ -1,7 +1,4 @@
-extends Control
-
-
-
+extends CanvasLayer
 
 func _on_button_1_pressed():
 	Global.vida = true

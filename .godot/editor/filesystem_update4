@@ -6,3 +6,7 @@ res://cenas/parallax_background.tscn
 res://cenas/bg_music.tscn
 res://cenas/menu.tscn
 res://cenas/main.tscn
+res://scripts/menu.gd
+res://scripts/Global.gd
+res://scripts/main.gd
+res://scripts/tutorial.gd

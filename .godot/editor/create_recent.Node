@@ -1,3 +1,4 @@
+CanvasLayer
 CollisionShape2D
 StaticBody2D
 AudioStreamPlayer

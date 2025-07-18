@@ -22,6 +22,9 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_action_just_pressed("ui_text_clear_carets_and_selection"):
+		get_tree().quit()
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		Global.vida = true
 		Global.pontos = 0
